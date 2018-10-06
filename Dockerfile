@@ -5,7 +5,7 @@ LABEL MAINTAINER="Ayyaz Zafar <contact@ayyaz.io>"
 #Linux setup
 RUN apk update \
   && apk add --update alpine-sdk \
-  && apk add --no-cache curl
+  && apk add --no-cache curl \
   && apk del alpine-sdk \
   && rm -rf /tmp/* /var/cache/apk/* *.tar.gz ~/.npm \
   && npm cache verify \
