@@ -14,7 +14,9 @@ RUN npm install -g serverless
 
 RUN apk add python python-dev && curl -O https://bootstrap.pypa.io/get-pip.py && python get-pip.py --user \
    && echo 'export PATH=~/.local/bin:$PATH' >>~/.bash_profile && source ~/.bash_profile \
-   && pip install awscli --upgrade --user && pip install awscli --upgrade --user
+   && pip install awscli --upgrade --user && pip install awscli --upgrade --user \
+   && echo 'export PATH=~/.local/bin:$PATH' >>~/.bash_profile && source ~/.bash_profile \
+   && alias aws=~/.local/bin/aws
 #RUN  
 
 #Angular CLI
